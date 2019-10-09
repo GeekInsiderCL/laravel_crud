@@ -34,7 +34,7 @@ class SiswaController extends Controller
         $siswa->alamat = $request->alamat;
         $siswa->save();
 
-        return "Data Successfully Added!";
+        return redirect('/siswa')->with('added','Data Berhasil Ditambahkan!');
     }
 
     /**

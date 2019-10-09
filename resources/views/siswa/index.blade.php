@@ -6,6 +6,11 @@
     <body>
         <br>
         <div class="container">
+            @if(session('added'))
+                <div class="alert alert-success" role="alert">
+                   {{ session('added') }}
+                </div>
+            @endif
             <div class="row">
                 <div class="col-6">
                 <h1> Data Siswa </h1>
