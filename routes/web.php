@@ -12,5 +12,5 @@
 */
 
 Route::get('/siswa', 'SiswaController@index'); 
-    // return view('welcome');
+Route::post('/siswa/create', 'SiswaController@create');
 
