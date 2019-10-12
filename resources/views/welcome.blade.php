@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" type="image/jpg" href="icon.jpg">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
         <title>
         CRUD Data Siswa
         </title>

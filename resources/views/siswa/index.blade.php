@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="shortcut icon" href="C:\xampp\htdocs\laravel_crud\storage\app\public\icon.jpg" /> 
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
         <title>
         CRUD Data Siswa - Admin
         </title>
