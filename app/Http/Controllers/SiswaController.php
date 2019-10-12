@@ -49,9 +49,9 @@ class SiswaController extends Controller
      * @param  \App\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function show(siswa $siswa)
+    public function home()
     {
-        //
+        return view('welcome');
     }
 
     /**

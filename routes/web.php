@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/siswa', 'SiswaController@index'); 
+Route::get('/', 'SiswaController@home');
+Route::get('/siswa', 'SiswaController@index');
 Route::post('/siswa/create', 'SiswaController@create');
 
