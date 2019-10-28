@@ -17,7 +17,7 @@
             @endif
             <div class="row">
                 <div class="col-6">
-                <h1> Data Siswa </h1>
+                <h1 class="display-4"> Data Siswa </h1>
                 </div>
                 <div class="col-6">
                     <!-- Button trigger modal -->
@@ -26,12 +26,14 @@
                     </button>
                 </div>
                 <div class="table-responsive-sm">
-                <table class="table table-bordered table-hover table-dark">
-                    <tr class="">
-                    <td>Nama</td>
-                    <td>Role</td>
-                    <td>Alamat</td>
+                <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                    <th>Nama</th>
+                    <th>Role</th>
+                    <th>Alamat</th>
                     </tr>
+                </thead>
                     @foreach($data_siswa as $siswa)
                     <tr>
                         <td>{{$siswa->nama}}</td>
