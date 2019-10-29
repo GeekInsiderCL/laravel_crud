@@ -13,4 +13,5 @@
 Route::get('/', 'SiswaController@home');
 Route::get('/siswa', 'SiswaController@index');
 Route::post('/siswa/create', 'SiswaController@create');
+Route::get('/siswa/{id}/update', 'SiswaController@update');
 
