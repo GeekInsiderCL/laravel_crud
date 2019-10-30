@@ -60,8 +60,11 @@ class SiswaController extends Controller
      * @param  \App\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function edit(siswa $siswa){
-        //
+    public function update(request $request, $id){
+        $siswa = Siswa::find($id);
+        $siswa->update($request->all());
+        
+        return redirect('siswa')->with('success','Data has been updated!');
     }
 
     /**
@@ -71,18 +74,21 @@ class SiswaController extends Controller
      * @param  \App\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
-        $nama = $request->nama;
+    public function edit($id){
+        /* $nama = $request->nama;
         $role = $request->role;
-        $alamat = $request->alamat;
-
+        $alamat = $request->alamat; */
+        
         $siswa = Siswa::find($id);
-        $siswa->nama = $nama;
+        //dd($siswa);
+        /* $siswa->nama = $nama;
         $siswa->role = $role;
         $siswa->alamat = $alamat;
         $siswa->save();
-
-        return "Data Has Been Updated!";
+ */
+        return view('siswa/update', ['siswa'=>$siswa]);
+        /* return redirect('/siswa')->with('edited','Data has been updated!');
+        return "Data Has Been Updated!"; */
     }
 
     /**
@@ -95,6 +101,6 @@ class SiswaController extends Controller
         $siswa = Siswa::find($id);
         $siswa->delete();
 
-        return "Data Has Been Deleted!";
+        return redirect('/siswa')->with('success','Data has been deleted!');
     }
 }

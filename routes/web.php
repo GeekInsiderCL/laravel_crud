@@ -13,5 +13,6 @@
 Route::get('/', 'SiswaController@home');
 Route::get('/siswa', 'SiswaController@index');
 Route::post('/siswa/create', 'SiswaController@create');
-Route::get('/siswa/{id}/update', 'SiswaController@update');
-
+Route::get('/siswa/{id}/edit', 'SiswaController@edit');
+Route::post('/siswa/{id}/update', 'SiswaController@update');
+Route::get('/siswa/{id}/destroy', 'SiswaController@destroy');
