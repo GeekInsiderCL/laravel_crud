@@ -12,10 +12,15 @@ class SiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(request $request)
     {
-        // return "Ini Data Siswa";
-        $data_siswa = Siswa::all();
+        if($request->has('search')){
+            $data_siswa = Siswa::where('nama','LIKE','%'.$request->search.'%')->get();
+        }
+        else{
+            $data_siswa = Siswa::all();
+        }
+
         return view('siswa.index')->with('data_siswa', $data_siswa);
         // return Siswa::all();
     }
