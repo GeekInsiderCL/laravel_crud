@@ -37,8 +37,7 @@
 		<div class="clearfix"></div>
 		<footer>
 			<div class="container-fluid">
-				<p class="copyright">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-</p>
+				<p class="copyright">Geek Insider <i class="fa fa-love"></i>CodeLabs</p>
 			</div>
 		</footer>
 	</div>
@@ -47,6 +46,8 @@
 	<script src="{{ asset('admin/assets/vendor/jquery/jquery.min.js') }}"></script>
 	<script src="{{ asset('admin/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
 	<script src="{{ asset('admin/assets/scripts/klorofil-common.js') }}"></script>
     <!-- End Of javascript -->
 </body>

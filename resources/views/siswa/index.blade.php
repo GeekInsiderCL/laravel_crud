@@ -11,14 +11,6 @@
 							<div class="panel">
 								<div class="panel-heading">
 									<h2>Data Employee</h2>
-                                    <div class="right">
-                                        <form class="navbar-form navbar-right" method="GET" action="/siswa">
-                                            <div class="input-group">
-                                            <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search Data Employee" aria-label="Search">
-                                                <span class="input-group-btn"><button type="submit" class="btn btn-info">Search</button></span>
-                                            </div>
-                                        </form>
-                                    </div>
                                 </div>
                                 
 								<div class="panel-body">
@@ -66,6 +58,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Add -->
     <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -105,4 +99,4 @@
                 </form>
             </div>
         </div>
-@stop
+@endsection
