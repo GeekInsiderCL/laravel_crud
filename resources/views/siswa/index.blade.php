@@ -13,18 +13,14 @@
     </head>
     <body>
     <br>
+    <br>
     <div class="main-container container-fluid">
-            <!-- heading -->
+        <!-- heading -->
         <div class="container-fluid">
-            @if(session('success'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('success') }}
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-            @endif
             <div class="row">
                 <div class="col-6">
-                    <h1 class="text-primary mr-auto">Data Employee</h1>
+                    <h4 class="text-primary mr-auto">Data Employee</h4>
+                    <br>
                 </div>
                 <div class="col-6">
                     <!-- Button trigger modal -->
@@ -35,31 +31,36 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="TableEmployee" >
+            <table class="table table-md table-striped table-bordered" id="TableEmployee">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Name</th>
-                        <th>Role</th>
-                        <th>Address</th>
-                        <th>Action</th>
+                        <th width="100px" style="text-align: center">Name</th>
+                        <th width="200px" style="text-align: center">Role</th>
+                        <th width="300px" style="text-align: center">Address</th>
+                        <th width="75px" style="text-align: center">Action</th>
                     </tr>
                 </thead>
                         
                 @foreach($data_siswa as $siswa)
                         
                     <tr>
-                        <td>{{$siswa->nama}}</td>
-                        <td>{{$siswa->role}}</td>
-                        <td>{{$siswa->alamat}}</td>
-                        <td>
-                            <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+                        <td width="100px">{{$siswa->nama}}</td>
+                        <td width="200px">{{$siswa->role}}</td>
+                        <td width="300px">{{$siswa->alamat}}</td>
+                        <td width="75px" style="text-align: center">
+                            <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a> /
                             <a href="/siswa/{{$siswa->id}}/destroy" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 @endforeach
             </table>
         </div>
-
+        @if(session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+        @endif
         <!-- Modal Add-->
         <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="ModalAddLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
