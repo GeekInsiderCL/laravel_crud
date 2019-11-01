@@ -2,6 +2,53 @@
 @extends('layouts/master')
 
 @section('content')
+
+<div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+          <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+											<tr>
+                                                <th width="100px" style="text-align: center">Name</th>
+                                                <th width="200px" style="text-align: center">Role</th>
+                                                <th width="250px" style="text-align: center">Address</th>
+                                                <th width="125px" style="text-align: center">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+
+                                        @foreach($data_siswa as $siswa)
+                                            <tr>
+                                                <td width="100px">{{$siswa->nama}}</td>
+                                                <td width="200px">{{$siswa->role}}</td>
+                                                <td width="250px">{{$siswa->alamat}}</td>
+                                                <td width="125px" style="text-align: center">
+                                                    <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a> /
+                                                    <a href="/siswa/{{$siswa->id}}/destroy" class="btn btn-danger btn-sm">Delete</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        
+										</tbody>
+									</table>
+                                    </div>
+                </div>
+            </div>
+        </div>
+                                    
+
+@stop
+@section('content1')
     <div class="main">
         <div class="main-content">
             <div class="container-fluid">
@@ -10,7 +57,7 @@
 							<!-- BORDERED TABLE -->
 							<div class="panel">
 								<div class="panel-heading">
-									<h2>Data Employee</h2>
+									<h3>Data Employee</h3>
                                 </div>
                                 
 								<div class="panel-body">
@@ -25,8 +72,8 @@
 											<tr>
                                                 <th width="100px" style="text-align: center">Name</th>
                                                 <th width="200px" style="text-align: center">Role</th>
-                                                <th width="300px" style="text-align: center">Address</th>
-                                                <th width="75px" style="text-align: center">Action</th>
+                                                <th width="250px" style="text-align: center">Address</th>
+                                                <th width="125px" style="text-align: center">Action</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -35,8 +82,8 @@
                                             <tr>
                                                 <td width="100px">{{$siswa->nama}}</td>
                                                 <td width="200px">{{$siswa->role}}</td>
-                                                <td width="300px">{{$siswa->alamat}}</td>
-                                                <td width="75px" style="text-align: center">
+                                                <td width="250px">{{$siswa->alamat}}</td>
+                                                <td width="125px" style="text-align: center">
                                                     <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a> /
                                                     <a href="/siswa/{{$siswa->id}}/destroy" class="btn btn-danger btn-sm">Delete</a>
                                                 </td>
