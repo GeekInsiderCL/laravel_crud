@@ -32,6 +32,10 @@ class SiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function add(){
+        $siswa = new Siswa;
+        return view('/siswa/add');
+    }
     public function create(request $request){
         $siswa = new Siswa;
         $siswa->nama = $request->nama;
@@ -39,7 +43,7 @@ class SiswaController extends Controller
         $siswa->alamat = $request->alamat;
         $siswa->save();
 
-        return redirect('/siswa')->with('added','Data has been added!');
+        return redirect('/siswa')->with('success','Data has been added!');
     }
 
     /**
@@ -80,20 +84,9 @@ class SiswaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id){
-        /* $nama = $request->nama;
-        $role = $request->role;
-        $alamat = $request->alamat; */
-        
         $siswa = Siswa::find($id);
-        //dd($siswa);
-        /* $siswa->nama = $nama;
-        $siswa->role = $role;
-        $siswa->alamat = $alamat;
-        $siswa->save();
- */
+
         return view('siswa/update', ['siswa'=>$siswa]);
-        /* return redirect('/siswa')->with('edited','Data has been updated!');
-        return "Data Has Been Updated!"; */
     }
 
     /**
