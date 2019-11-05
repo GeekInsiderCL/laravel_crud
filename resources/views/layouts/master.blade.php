@@ -70,7 +70,7 @@
 			</div>
 			<div class="modal-body">Select "Yes" below if you are ready to end your current session.</div>
 			<div class="modal-footer">
-			<a class="btn btn-primary" href="/">Yes</a>
+			<a class="btn btn-primary" href="/logout">Yes</a>
 			<button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
 			</div>
 		</div>
