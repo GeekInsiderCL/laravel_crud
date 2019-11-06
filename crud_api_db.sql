@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2019 at 02:32 PM
+-- Generation Time: Nov 06, 2019 at 03:40 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -91,13 +91,10 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nama`, `role`, `alamat`, `created_at`, `updated_at`) VALUES
-(2, 'Ary Syaddam', 'DevOps Engineer, Woody Developer', 'Kp. Sukamaju RT.01 RW.01, Cilame, Ngamprah, Kabutapen Bandung Barat', '2019-10-02 05:36:25', '2019-10-02 05:54:24'),
-(3, 'Anggit Muhamad Ginanjar', 'Software Developer, DevOps Engineer, IoT Enthusiasm', 'Cibeber', '2019-10-02 05:52:39', '2019-10-02 05:55:39'),
-(4, 'Moch. Diki Ramdani', 'IT Infrastructure', 'Hawurngambang, Batujajar', '2019-10-02 05:53:30', '2019-10-02 05:53:30'),
-(5, 'Bayu', 'IT Technician', 'Cijerah', '2019-10-09 10:42:19', '2019-10-09 10:42:19'),
-(6, 'Deza', 'IT Infra', 'Jakarta', '2019-10-09 10:44:55', '2019-10-09 10:44:55'),
-(7, 'Condro', 'Technical Support', 'Cilame', '2019-10-09 14:38:28', '2019-10-09 14:38:28'),
-(8, 'Ahmad Reja', 'IT DC Technician', 'Jatiluhur', '2019-10-09 14:47:42', '2019-10-09 14:47:42');
+(2, 'Ary Syaddam', 'DevOps Engineer, Woody Developer', 'Kp. Sukamaju.', '2019-10-02 05:36:25', '2019-11-01 04:20:40'),
+(3, 'Anggit Muhamad Ginanjar', 'Software Developer, DevOps Engineer, IoT Enthusiasm', 'Cibeber', '2019-10-02 05:52:39', '2019-10-31 14:33:01'),
+(6, 'Deza Nur', 'IT Infrasturcture Development', 'MH. Thamrin.', '2019-10-09 10:44:55', '2019-10-31 03:53:02'),
+(8, 'Ahmad Reja', 'IT DC Technician', 'Jatiluhur, Jawa Barat.', '2019-10-09 14:47:42', '2019-11-01 23:49:30');
 
 -- --------------------------------------------------------
 
@@ -115,6 +112,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Administrator', 'admin@local.com', NULL, '$2y$10$GdCGP/oJjRUcgj2uM2pzzuu3IwixY96LL9lfLEasgA5khKH22II36', 'Iia5jyHUVECRjaDNpyOML2kJatqdmDYYw7AvgS62U3F990FgbJEdfPkkG0X5', '2019-11-02 14:42:49', '2019-11-02 14:42:49');
 
 --
 -- Indexes for dumped tables
@@ -171,13 +175,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
