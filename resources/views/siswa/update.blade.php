@@ -33,7 +33,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="/siswa" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                        <a href="/siswa" class="btn btn-secondary">Cancel</a>
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
                                     </div>
                                 </div>

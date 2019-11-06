@@ -39,7 +39,7 @@
                                     <td>{{$siswa->alamat}}</td>
                                     <td>
                                         <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Update</a>
-                                        <a href="/siswa/{{$siswa->id}}/destroy" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="/siswa/{{$siswa->id}}/destroy" class="btn btn-danger btn-sm" onclick="return confirm('Delete this data ?')">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

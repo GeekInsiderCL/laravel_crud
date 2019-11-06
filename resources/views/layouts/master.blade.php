@@ -32,23 +32,25 @@
 		<!-- Content Wrapper -->
 		<div id="content-wrapper" class="d-flex flex-column">
 
-		<!-- Main Content -->
-		<div id="content">
+			<!-- Main Content -->
+			<div id="content">
 
-			<!-- Navbar -->
-			@include('layouts.includes._navbar')
-			<!-- End of Navbar -->
+				<!-- Navbar -->
+				@include('layouts.includes._navbar')
+				<!-- End of Navbar -->
 
-		<!-- Begin of Content -->
-		@yield('content')
-		<!-- End of Content -->
+				<!-- Begin of Content -->
+				@yield('content')
+				<!-- End of Content -->
 
-		<!-- Footer -->
-		@include('layouts.includes._footer')  
-		<!-- End of Footer -->
+				<!-- Footer -->
+				@include('layouts.includes._footer')  
+				<!-- End of Footer -->
+
+			</div>
+			<!-- End of Content Wrapper -->
 
 		</div>
-		<!-- End of Content Wrapper -->
 
 	</div>
 	<!-- End of Page Wrapper -->

@@ -1,5 +1,6 @@
 
 @extends('layouts/master')
+
 @section('content')
     <div class="main">
         <div class="main-content">
@@ -12,7 +13,7 @@
                             </div>
                         <form role="form" class="form-horizontal"  action="/siswa/create" method="POST">
                         {{ csrf_field() }}
-                            <div class="card text-white bg-dark mb-0">
+                            <div class="card mb-0">
                                 <div class="card-body">
                                     <div class="form-group row">
                                         <label for="nama" class="col-sm-2 col-form-label">Name</label>
@@ -33,7 +34,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="/siswa" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                        <a href="/siswa" class="btn btn-secondary">Cancel</a>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
