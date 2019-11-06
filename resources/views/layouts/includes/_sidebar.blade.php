@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
 	<!-- Sidebar - Brand -->
 		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -13,14 +13,14 @@
 
 	<!-- Nav Item - Menu -->
 
-	<li class="nav-item active">
-		<a class="nav-link" href="/dashboard">
+	<li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
+		<a class="nav-link" href="{{ url('dashboard') }}">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span>
 		</a>
 	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="/siswa">
+	<li class="nav-item {{ Request::is('siswa') ? 'active' : '' }}">
+		<a class="nav-link" href="{{ url('siswa') }}">
 			<i class="fas fa-fw fa-table"></i>
 			<span>Data Employee</span>
 		</a>
