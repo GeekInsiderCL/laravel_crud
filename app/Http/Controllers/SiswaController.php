@@ -43,6 +43,7 @@ class SiswaController extends Controller
         $siswa->alamat = $request->alamat;
         $siswa->save();
 
+        return "Data has been added!";
         return redirect('/siswa')->with('success','Data has been added!');
     }
 
@@ -73,6 +74,7 @@ class SiswaController extends Controller
         $siswa = Siswa::find($id);
         $siswa->update($request->all());
         
+        return "Data has been updated!";
         return redirect('siswa')->with('success','Data has been updated!');
     }
 
@@ -99,6 +101,7 @@ class SiswaController extends Controller
         $siswa = Siswa::find($id);
         $siswa->delete();
 
+        return "Data has been deleted";
         return redirect('/siswa')->with('success','Data has been deleted!');
     }
 }
