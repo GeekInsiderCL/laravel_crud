@@ -37,12 +37,12 @@
               <div class="col-12">
                 <div class="p-5">                  
                   <div class="alert alert-success text-center" role="alert">
-                    <h4 class="h4"><a class="btn btn-success btn-circle btn-lg">
+                    <h4 class="h4"><a href="" class="btn btn-success btn-circle btn-lg">
                     <i class="fas fa-check"></i>
                   </a><br><br>You have been successfully logged out.</h4>
                   </div>
                   <br>
-                    <a href="/login" type="submit" class="btn btn-primary btn-user btn-block">
+                    <a href="/login"  class="btn btn-primary btn-user btn-block">
                       Click here to continue...
                     </a>
                 </div>

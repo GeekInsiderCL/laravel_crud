@@ -18,7 +18,7 @@
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span>
 		</a>
-	</li>
+	</li>	
 	<li class="nav-item {{ Request::is('siswa') ? 'active' : '' }}">
 		<a class="nav-link" href="{{ url('siswa') }}">
 			<i class="fas fa-fw fa-table"></i>
