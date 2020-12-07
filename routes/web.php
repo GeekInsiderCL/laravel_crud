@@ -27,4 +27,4 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/siswa/{id}/destroy', 'SiswaController@destroy');
     Route::get('/logout', 'AuthController@logout');
 });
-//test git cok
+//test git
